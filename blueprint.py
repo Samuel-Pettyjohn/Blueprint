@@ -45,7 +45,7 @@ DEFAULT_IGNORES = {
     "*.lock",
 }
 
-# files we always summarize when found
+# files always summarized when found
 KEY_FILENAMES = {
     "README.md",
     "readme.md",
@@ -525,7 +525,7 @@ def render_document(
 INDEX_VERSION = 1
 INDEX_FILENAME = "PROJECT_INDEX.json"
 
-# suffix -> language used by the indexer
+# language used by the indexer
 LANGUAGE_BY_EXT = {
     ".py":  "python",
     ".js":  "javascript",
@@ -556,7 +556,7 @@ def _signature_from_args(node: ast.AST) -> str:
     try:
         return f"{name}({ast.unparse(args_node)})"
     except (AttributeError, ValueError):
-        # python < 3.9: positional names only
+        # python < 3.9: positional names only, no defaults/annotations
         names = [a.arg for a in getattr(args_node, "args", [])]
         return f"{name}({', '.join(names)})"
 
