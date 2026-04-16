@@ -1,6 +1,6 @@
 # NOTE
 
-On a repo with ~100+ source files where AI Coding is doing multiple symbol lookups per session, this probably cuts navigation related tokens by 50-80%. On a 10 file script, it's break-even or slightly negative. I do NOT recommend using this on smaller projects as it can increase token consumtion.
+On a repo with ~100+ source files where AI Coding is doing multiple symbol lookups per session, this probably cuts navigation related tokens by 50-80%. On a 10 file script, it's breaking even or slightly negative. I do NOT recommend using this on smaller projects as it can increase token consumtion.
 
 # blueprint
 
